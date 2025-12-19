@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>McSage Sunucu Tanıtımı</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{box-sizing:border-box;font-family:"Segoe UI",sans-serif}
+body{
+  margin:0;
+  min-height:100vh;
+  background:
+    radial-gradient(circle at top,#00eaff22,transparent 40%),
+    linear-gradient(135deg,#0a1a22,#102f3a,#143f52);
+  color:#fff;
+}
+.container{max-width:1100px;margin:auto;padding:40px 20px}
+header{text-align:center;margin-bottom:45px}
+header h1{
+  font-size:46px;
+  color:#00eaff;
+  text-shadow:0 0 15px #00eaff88;
+}
+header p{color:#bfefff;opacity:.9}
+.nav{
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  margin-bottom:45px;
+}
+.nav button{
+  padding:14px 30px;
+  border:none;
+  border-radius:30px;
+  background:rgba(255,255,255,.18);
+  color:#fff;
+  cursor:pointer;
+  font-size:16px;
+  transition:.25s ease;
+}
+.nav button:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 15px #00eaff88,0 0 30px #00eaff44;
+}
+.nav button.active{
+  background:#00eaff;
+  color:#000;
+  font-weight:700;
+  box-shadow:0 0 20px #00eaffcc,0 0 40px #00eaff88;
+}
+.glass{
+  background:rgba(255,255,255,.14);
+  backdrop-filter:blur(18px);
+  border-radius:24px;
+  padding:40px;
+  box-shadow:
+    0 25px 60px rgba(0,0,0,.45),
+    inset 0 0 30px rgba(0,234,255,.15);
+  border:1px solid rgba(0,234,255,.25);
+}
+.section{display:none;animation:contentIn .45s ease}
+.section.active{display:block}
+.section h2{
+  color:#00eaff;
+  margin-top:0;
+  text-shadow:0 0 10px #00eaff66;
+}
+.section h3{
+  margin-top:30px;
+  color:#9feaff;
+}
+.section p{
+  line-height:1.75;
+  font-size:17px;
+  margin-bottom:14px;
+  color:#e7f9ff;
+}
+@keyframes contentIn{
+  from{opacity:0;transform:translateY(12px)}
+  to{opacity:1;transform:translateY(0)}
+}
+footer{
+  text-align:center;
+  margin-top:55px;
+  color:#9ddfff;
+  opacity:.7;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+  <h1>McSage</h1>
+  <p>Topluluk Odaklı, Güncel ve Stabil Minecraft Deneyimi</p>
+</header>
+
+<div class="nav">
+  <button class="active" onclick="showSection('about',this)">Sunucu Hakkında</button>
+  <button onclick="showSection('mods',this)">Modlar ve Altyapı</button>
+  <button onclick="showSection('rules',this)">Kurallar</button>
+</div>
+
+<div class="glass">
+
+<div id="about" class="section active">
+  <h2>Sunucu Hakkında</h2>
+  <p>
+    McSage, Minecraft 1.20.4 sürümü temel alınarak oluşturulmuş, uzun süreli
+    oynanışa uygun bir topluluk sunucusudur. Sunucu, düzenli bakım ve güncellemeler
+    ile sürekli olarak geliştirilmektedir.
+  </p>
+  <p>
+    Amacımız oyunculara adil, stabil ve keyifli bir ortam sunmak; kısa vadeli
+    oynanış yerine kalıcı bir topluluk oluşturmaktır.
+  </p>
+</div>
+
+<div id="mods" class="section">
+  <h2>Modlar ve Altyapı Bilgilendirmesi</h2>
+
+  <h3>Oynanış ve Mekanik Geliştirme Modları</h3>
+  <p>
+    Better Combat, Combat Roll, Epic Knights, Shield Expansion, RPGStats,
+    AttributeFix, PlayerEx, LevelZ ve Scaling Health modları ile
+    savaş ve karakter gelişimi derinleştirilmiştir.
+  </p>
+
+  <h3>Dünya Üretimi ve Keşif</h3>
+  <p>
+    Terralith, Biomes O' Plenty, Regions Unexplored, YUNG’s Better Dungeons,
+    YUNG’s Better Strongholds, Repurposed Structures, Structory ve
+    Explorify modları sayesinde dünya keşfi çeşitlendirilmiştir.
+  </p>
+
+  <h3>İnşa ve Estetik Modları</h3>
+  <p>
+    Create, Create Additions, Chipped, Supplementaries, Decorative Blocks,
+    Macaw’s Furniture, Macaw’s Doors, Macaw’s Windows, Macaw’s Roofs,
+    FramedBlocks ve Handcrafted modları yapı deneyimini zenginleştirir.
+  </p>
+
+  <h3>Hayatta Kalma ve Tarım</h3>
+  <p>
+    Farmer’s Delight, Farmer’s Respite, Croptopia, Brewin’ and Chewin’,
+    Expanded Delight, Serene Seasons ve Fishing Overhaul modları
+    survival oynanışını detaylandırır.
+  </p>
+
+  <h3>Depolama ve Envanter Yönetimi</h3>
+  <p>
+    Sophisticated Backpacks, Sophisticated Storage, Storage Drawers,
+    Iron Chests, Tool Belt ve Inventory Profiles Next modları ile
+    envanter yönetimi kolaylaştırılmıştır.
+  </p>
+
+  <h3>Ulaşım ve Hareket</h3>
+  <p>
+    Waystones, Traveler’s Backpack, Better Horses, Small Ships,
+    When Dungeons Arise ve Elytra Slot modları sayesinde
+    dünya içi ulaşım hızlandırılmıştır.
+  </p>
+
+  <h3>Performans ve Optimizasyon</h3>
+  <p>
+    Sodium, Lithium, FerriteCore, Starlight, LazyDFU, Entity Culling,
+    Dynamic FPS ve Memory Leak Fix modları ile
+    sunucu ve istemci performansı maksimum seviyede tutulur.
+  </p>
+
+  <h3>Sunucu Altyapısı</h3>
+  <p>
+    Sunucu altyapısı optimize edilmiş konfigürasyonlar ile çalışır.
+    Tick oranları, chunk yükleme limitleri ve entity yönetimi
+    düzenli olarak kontrol edilir.
+  </p>
+  <p>
+    Yedekleme sistemleri aktif olup veri kaybı riski minimum seviyededir.
+    Güncellemeler test ortamında denendikten sonra ana sunucuya aktarılır.
+  </p>
+</div>
+
+<div id="rules" class="section">
+  <h2>Kurallar</h2>
+  <p>
+    Küfür, hakaret, hile, exploit ve kasıtlı lag oluşturma yasaktır.
+  </p>
+  <p>
+    Yetkililerin kararlarına saygı gösterilmelidir.
+  </p>
+  <p>
+    Kurallara uymayan oyunculara uyarı, uzaklaştırma veya kalıcı yasaklama
+    uygulanabilir.
+  </p>
+</div>
+
+</div>
+
+<footer>
+  © 2025 McSage • Tüm hakları saklıdır
+</footer>
+
+</div>
+
+<script>
+function showSection(id,btn){
+  document.querySelectorAll(".section").forEach(s=>s.classList.remove("active"));
+  document.querySelectorAll(".nav button").forEach(b=>b.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+  btn.classList.add("active");
+}
+</script>
+
+</body>
+</html>
